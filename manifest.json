@@ -1,0 +1,27 @@
+{
+	"manifest_version":3,
+	"name":"Screen recorder",
+	"action":{
+		"default_popup":"popup.html"
+	 },
+	"background": {
+		"service_worker": 
+			"background.js"
+	},
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"js": ["content.js"]
+	}],
+	"version":"0.1",
+	"permissions":["webRequest",
+		"tabCapture",
+		"tabs",
+		"storage",
+		"desktopCapture",
+		"downloads",
+		"declarativeNetRequest",
+		"declarativeNetRequestWithHostAccess",
+		"declarativeNetRequestFeedback",
+		"notifications"]
+
+}
